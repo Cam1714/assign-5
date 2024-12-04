@@ -1,9 +1,16 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
+import Hero from '../components/Hero.vue';
+import Feature from '../components/Feature.vue';
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="home-view">
+    <Header />
+    <Hero />
+    <Feature />
+    <Footer />
+  </div>
 </template>
+

@@ -18,11 +18,6 @@ numbers.value = (() => {
   }
 })();
 
-// Random 3 numbers using a range
-// numbers.value.push(Math.floor(Math.random() * 6));
-// numbers.value.push(6 + Math.floor(Math.random() * 7));
-// numbers.value.push(14 + Math.floor(Math.random() * 4));
-
 onMounted(async () => {
   response.value = await axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}`);
 })
@@ -40,3 +35,48 @@ onMounted(async () => {
 </template>
 
 <style scoped></style>
+
+<style>
+.movie-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  text-align: center;
+}
+
+.movie-poster {
+  width: 100% !important; 
+  height: auto !important; /*need to fix at some point */
+  object-fit: cover;
+}
+
+.movie-title {
+  font-size: 1rem;
+  color: hotpink;
+  margin-top: 10px;
+}
+
+.text {
+  margin-top: 20px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+</style>
+
+
+
+
+
+  
+  
+  
